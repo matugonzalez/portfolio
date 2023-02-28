@@ -6,6 +6,7 @@
     --hue-color:200; 
     /* 240 violet/blue, 300 pink, 200 lblue, 100 green, 0 lbrown */
     --first-color:hsl(var(--hue-color), 70%, 30%);
+    --first-color-darker:hsl(var(--hue-color), 60%, 20%);
     --first-color-lighter:hsl(var(--hue-color), 60%, 90%);
     --first-color-alt:hsl(var(--hue-color), 53%, 69%);
     --first-color-second:hsl(var(--hue-color), 92%, 85%);
@@ -101,23 +102,71 @@ body
     margin-top: 30px;
     display: grid;
     place-items: center;
+    padding-bottom: 20px;
+    border-bottom:1px solid var(--text-color-light);
 }
 .contactInfo h3{
     font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 900;
 }
-li
+.contactInfo li
 {   
     list-style: none;
     margin: 10px;
 }
-
-
-
-
-
-
+.hobbies
+{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.hobbies h3
+{
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.hobbiesBx ul
+{
+    display: flex;
+}
+.hobbiesBx li
+{
+    display: grid;
+    place-items: center;
+    list-style: none;
+    margin: 10px;
+}
+.skills
+{
+    display: grid;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.skills h3
+{
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.skillBar
+{
+    background-color: var(--container-color);
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.skillProgress
+{
+    height: 100%;
+    background: var(--first-color-alt);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
 .container .right_Side
 {
     position: relative;
