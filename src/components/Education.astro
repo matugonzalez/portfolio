@@ -1,0 +1,56 @@
+---
+import { tldr } from "../content/content";
+
+const data = tldr;
+const language = 'english'
+const carrers = data[language].sections.education.carrers
+const courses = data[language].sections.education.courses
+---
+<div class="w-full">
+    <h2 class="capitalize">
+        {data[language].sections.education.title}
+    </h2>
+    <ul class="flex gap-10">
+        {
+            carrers.map((carrer) => {
+                return (
+                    <div class="flex flex-col">
+                        <span class="font-bold capitalize">
+                            {carrer.name}
+                        </span>
+                        <span class="text-sm">
+                            {carrer.university}, {carrer.location}
+                        </span>
+                        <span class="text-xs">
+                            {carrer.startDate} - {carrer.finishDate} |
+                            <span>
+                                {carrer.duration.number} {carrer.duration.years}
+                            </span>
+                        </span>
+                    </div>
+                )
+            })
+        }
+        {
+            courses.map((course) => {
+                return (
+                    <div class="flex flex-col">
+                        <span class="font-bold capitalize">
+                            {course.name}
+                        </span>
+                        <span class="text-sm">
+                            {course.university}, {course.location}
+                        </span>
+                        <span class="text-xs">
+                            
+                            {course.startDate} - {course.finishDate} |
+                            <span>
+                                {course.duration.number} {course.duration.years}
+                            </span>
+                        </span>
+                    </div>
+                )
+            })
+        }
+    </ul>
+</div>

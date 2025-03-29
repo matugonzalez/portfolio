@@ -1,0 +1,39 @@
+---
+import { tldr } from "../content/content";
+import Border from "./Border.astro";
+
+const data = tldr;
+const language = 'english';
+const skills = data[language].sections.skill.skills;
+---
+<h2 class="capitalize">
+    {data[language].sections.skill.title}
+</h2>
+
+<div class="flex gap-5">
+    {
+        skills.map((skill)=> {
+            let tools = skill.tools 
+            return (
+                <Border>
+                    <div class="flex flex-col">
+                        <span>
+                            {skill.area}
+                        </span>
+                        <ul>
+                            {
+                                tools.map((tool) => {
+                                    return (
+                                        <li>
+                                            {tool}
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                </Border>
+            )
+        })
+    }
+</div>

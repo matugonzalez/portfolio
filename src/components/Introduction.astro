@@ -1,0 +1,14 @@
+---
+import { tldr } from "../content/content";
+const data = tldr;
+const language = 'english'
+---
+
+<div>
+    <h2 class="capitalize">
+        {data[language].sections.introduction.title}
+    </h2>
+    <span>
+        {data[language].sections.introduction.intro}
+    </span>
+</div>
