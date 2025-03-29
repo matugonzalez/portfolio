@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --font-ui: 'Roboto';
+    --font-terminal: 'SharetechMono';
+    --color-fallout: #14FD16;
+}
+
+@font-face {
+    font-family: 'SharetechMono';
+    src:url('/public/fonts/SharetechMonoRegular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src:url('/public/fonts/RobotoVariable.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

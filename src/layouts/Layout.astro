@@ -1,0 +1,29 @@
+---
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪖</text></svg>">
+		<meta name="generator" content={Astro.generator} />
+		<title>Mateo González</title
+	</head>
+	<body>
+        <div>
+            <slot />
+        </div>
+	</body>
+</html>
+
+<style>
+    @import '../styles/global.css';
+	html {
+        @apply bg-neutral-900 text-fallout font-terminal;
+        box-sizing: border-box;
+    },
+	body {
+        @apply grid place-content-center;
+	}
+</style>
