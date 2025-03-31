@@ -13,13 +13,37 @@ const { className } = Astro.props;
     <a href={lang === 'en' ? '/es' : '/en'}>
         <button 
             id="languageToggle"
-            class={`SwitchButton__case w-10 h-6 rounded border-2 border-fallout-dark flex bg-transparent flex-row items-center px-0.5 ${className}`}
+            class={`LanguageButton__case w-10 h-6 rounded border-2 border-fallout-dark flex bg-transparent flex-row items-center px-0.5 ${className}`}
         >
             <div 
-                class='SwitchButton__drop w-4 h-4 bg-fallout-dark rounded-sm'
+                class='LanguageButton__drop w-4 h-4 bg-fallout-dark rounded-sm'
             >
             </div>
         </button>
     </a> 
     <span>{ui[lang].switch.language.spanish}</span>  
 </div>
+
+<style>
+    html.[lang='en'] div.LanguageButton__drop {
+        margin-left: calc(0% + theme(height.4));
+        margin-right: 0;
+        background-color: var(--color-fallout-dark);
+    }
+    html[lang='es'] div.LanguageButton__drop {
+        margin-left: 0;
+        margin-right: calc(100% - theme(height.4));
+    }
+    html[lang='es'].light div.LanguageButton__drop {
+        margin-left: calc(0% + theme(height.4));
+        margin-right: 0;
+        background-color: var(--color-fallout-light);
+    }
+
+    html[lang='en'].light div.LanguageButton__case {
+        border-color: var(--color-fallout-light);
+    }
+    html[lang='en'] div.LanguageButton__case {
+        border-color: var(--color-fallout-dark);
+    }
+</style>
