@@ -3,7 +3,48 @@
 @theme {
     --font-ui: 'Roboto';
     --font-terminal: 'SharetechMono';
-    --color-fallout: #14FD16;
+    --color-fallout-50: #E6FFE6;
+    --color-fallout-100: #D1FFD2;
+    --color-fallout-200: #9FFEA1;
+    --color-fallout-300: #71FE74;
+    --color-fallout-400: #44FD47;
+    --color-fallout-500: #14FD16;
+    --color-fallout-600: #02D905;
+    --color-fallout-700: #01A204;
+    --color-fallout-800: #016A03;
+    --color-fallout-900: #003801;
+    --color-fallout-950: #001901;
+
+    --color-terminal-primary-50: #ebfaf2;
+    --color-terminal-primary-100: #d7f4e6;
+    --color-terminal-primary-200: #afe9cc;
+    --color-terminal-primary-300: #86dfb3;
+    --color-terminal-primary-400: #5ed499;
+    --color-terminal-primary-500: #36c980;
+    --color-terminal-primary-600: #2ba166;
+    --color-terminal-primary-700: #20794d;
+    --color-terminal-primary-800: #165033;
+    --color-terminal-primary-900: #0b291a;
+    --color-terminal-primary-950: #05140d;
+
+    --color-terminal-secondary-50: #eef7f3;
+    --color-terminal-secondary-100: #dcefe6;
+    --color-terminal-secondary-200: #badecd;
+    --color-terminal-secondary-300: #97ceb4;
+    --color-terminal-secondary-400: #74be9b;
+    --color-terminal-secondary-500: #55af85;
+    --color-terminal-secondary-600: #438e6b;
+    --color-terminal-secondary-700: #336b51;
+    --color-terminal-secondary-800: #224836;
+    --color-terminal-secondary-900: #10231a;
+    --color-terminal-secondary-950: #08110d;
+
+    --color-fallout-dark: var(--color-fallout-300);
+    --color-fallout-light: var(--color-fallout-700);
+    --color-terminal-primary-dark: var(--color-terminal-primary-900);
+    --color-terminal-secondary-dark:var(--color-terminal-secondary-800);
+    --color-terminal-primary-light:var(--color-terminal-primary-300);
+    --color-terminal-secondary-light: var(--color-terminal-secondary-300); 
 }
 
 @font-face {
