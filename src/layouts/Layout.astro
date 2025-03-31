@@ -8,8 +8,8 @@
 		<meta name="viewport" content="width=device-width" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪖</text></svg>">
 		<meta name="generator" content={Astro.generator} />
-		<title>Mateo González</title
-	</head>
+		<title>Mateo González</title>
+    </head>
 	<body>
         <div>
             <slot />
@@ -19,10 +19,22 @@
 
 <style>
     @import '../styles/global.css';
-	html {
-        @apply bg-neutral-900 text-fallout font-terminal;
-        box-sizing: border-box;
-    },
+    html {
+        background: repeating-linear-gradient(
+        0deg,
+        transparent 0 4px,
+        var(--color-terminal-secondary-dark) 4px 8px
+        );
+        @apply font-terminal bg-terminal-primary-dark text-fallout-300;
+    }
+	html.light {
+        background: repeating-linear-gradient(
+        0deg,
+        transparent 0 4px,
+        var(--color-terminal-secondary-light) 4px 8px
+        );
+        @apply bg-terminal-primary-light m-0 p-0 text-fallout-light;
+    }
 	body {
         @apply grid place-content-center;
 	}

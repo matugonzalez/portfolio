@@ -1,0 +1,34 @@
+---
+import { tldr } from "../../content/content.ts";
+const data = tldr
+const language = 'english'
+const languages = data[language].sections.language.languages
+---
+<h2>
+    {data[language].sections.language.title}
+</h2>
+<ul>
+    {
+        languages.map((language) => {
+            return (
+                <li>
+                    <span>
+                        {language.name}
+                    </span>
+                    <span>
+                        :
+                    </span>
+                    <span>
+                        {language.level}
+                    </span>
+                    {
+                        language.cefr&&
+                        <span>
+                            {language.cefr}
+                        </span>
+                    }
+                </li>
+            )
+        })
+    }
+</ul>
