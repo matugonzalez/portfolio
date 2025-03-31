@@ -1,19 +1,27 @@
 ---
+import { ui } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
 interface Props {
     className?: string;
 }
 
+const lang = getLangFromUrl(Astro.url)
 const { className } = Astro.props; 
 ---
-<button 
-    id="themeToggle"
-    class={`SwitchButton__case w-10 h-6 rounded border-2 border-fallout-dark flex bg-transparent flex-row items-center px-0.5 ${className}`}
->
-    <div 
-        class='SwitchButton__drop w-4 h-4 bg-fallout-dark rounded-sm'
+<div class="flex">
+    <span>{ui[lang].switch.theme.dark}</span>
+    <button 
+        id="themeToggle"
+        class={`SwitchButton__case w-10 h-6 rounded border-2 border-fallout-dark flex bg-transparent flex-row items-center px-0.5 ${className}`}
     >
-    </div>
-</button>
+        <div 
+            class='SwitchButton__drop w-4 h-4 bg-fallout-dark rounded-sm'
+        >
+        </div>
+    </button>
+    <span>{ui[lang].switch.theme.light}</span>
+</div>
 
 <style>
     div.SwitchButton__drop {

@@ -1,14 +1,15 @@
 ---
-import { tldr } from "../../content/content";
+import { ui } from "../../i18n/ui";
+import { getLangFromUrl } from "../../i18n/utils";
 
-const data = tldr;
-const language = 'english'
-const carrers = data[language].sections.education.carrers
-const courses = data[language].sections.education.courses
+const lang = getLangFromUrl(Astro.url)
+
+const carrers = ui[lang].sections.education.carrers
+const courses = ui[lang].sections.education.courses
 ---
 <div class="w-full">
     <h2 class="capitalize">
-        {data[language].sections.education.title}
+        {ui[lang].sections.education.title}
     </h2>
     <ul class="flex gap-10">
         {

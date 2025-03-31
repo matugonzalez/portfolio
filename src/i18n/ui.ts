@@ -1,12 +1,26 @@
-export const tldr = {
-    name: 'Mateo González',
-    english: {
-        switch : {
-            theme: {
+import type { UI } from "./types";
+
+export const languages = {
+    en: {
+        english: 'english',
+        spanish: 'spanish'
+    },
+    es: {
+        english: 'Inglés',
+        spanish: 'Español',
+    }
+};
+  
+export const defaultLang = 'en';
+export const name = 'Mateo González'
+export const ui: UI = {
+    en: {
+        switch :{
+            theme:{
                 dark: 'dark',
                 light: 'light',
             },
-            language: {
+            language:{
                 english: 'english',
                 spanish: 'español',
             }
@@ -17,7 +31,7 @@ export const tldr = {
                 title: 'profile',
                 intro: 'Junior Frontend Developer passionate about creating attractive, responsive, and user-optimized interfaces. Skilled in HTML, CSS, JavaScript, and React, with experience in design. A fast learner, problem-solver, and team player. While my primary focus is on frontend development, I am actively expanding my backend knowledge and eager to enhance my skills in that area.',
             },
-            skill: {   
+            skill:{   
                 title: 'skills',
                 skills: [
                     {
@@ -99,9 +113,8 @@ export const tldr = {
             },
         }
     },
-    spanish: {
-        spanish: {
-            switch : {
+    es: {
+        switch : {
                 theme: {
                     dark: 'oscuro',
                     light: 'claro',
@@ -110,95 +123,95 @@ export const tldr = {
                     english: 'ingles',
                     spanish: 'español',
                 }
+        },
+        labor: 'desarrollador frontend',
+        sections: {
+            introduction: {
+                title: 'perfil',
+                intro: 'Desarrollador Frontend Junior apasionado por crear interfaces atractivas, responsivas y optimizadas para el usuario. Con conocimientos en HTML, CSS, JavaScript y React, así como experiencia en diseño. Aprendiz rápido, resolutivo y con habilidades para el trabajo en equipo. Si bien me encuentro mas enfocado en front, estoy aprendiendo mas de backend y me encuentro dispuesto a mejorar en ese área.'
             },
-            labor: 'desarrollador frontend',
-            sections: {
-                introduction: {
-                    title: 'perfil',
-                    intro: 'Desarrollador Frontend Junior apasionado por crear interfaces atractivas, responsivas y optimizadas para el usuario. Con conocimientos en HTML, CSS, JavaScript y React, así como experiencia en diseño. Aprendiz rápido, resolutivo y con habilidades para el trabajo en equipo. Si bien me encuentro mas enfocado en front, estoy aprendiendo mas de backend y me encuentro dispuesto a mejorar en ese área.'
-                },
-                skill: {
-                    title: 'habilidades',
-                    skills: [
-                        {
-                            area: 'frontend',
-                            tools: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TailwindCSS']
-                        },
+            skill: {
+                title: 'habilidades',
+                skills: [
+                    {
+                        area: 'frontend',
+                        tools: ['HTML', 'CSS', 'JavaScript', 'React.js', 'TailwindCSS']
+                    },
+    
+                    {
+                        area: 'backend',
+                        tools: ['Node.js', 'Express.js'],
+                    },
         
-                        {
-                            area: 'backend',
-                            tools: ['Node.js', 'Express.js'],
-                        },
+                    {
+                        area: 'vcs',
+                        tools: ['Git']
+                    },
         
-                        {
-                            area: 'vcs',
-                            tools: ['Git']
-                        },
+                    {
+                        area: 'diseño',
+                        tools: ['Figma']
+                    },
         
-                        {
-                            area: 'design',
-                            tools: ['Figma']
+                    {
+                        area: 'otras',
+                        tools: ['Github']
+                    },
+                    {
+                        area: 'actualmente aprendiendo',
+                        tools: ['Astro', 'TypeScript']
+                    }
+                ],
+            },
+            education: {
+                title: 'educacion',
+                carrers: [
+                    {
+                        name: 'Tecnicatura Universitaria en Programación',
+                        university: 'Universidad Tecnologica Nacional',
+                        startDate: 'Abril 2022',
+                        finishDate: 'Diciembre 2024',
+                        duration: {
+                            number: 2,
+                            years: 'años'
                         },
-        
-                        {
-                            area: 'otras',
-                            tools: ['Github']
+                        location: "Argentina, Tucumán",
+                    },
+                ],
+                courses: [
+                    {
+                        name: 'instituto de ingles',
+                        university: 'ATICANA',
+                        startDate: null,
+                        finishDate: null,
+                        duration: {
+                            number: 8,
+                            years: 'años'
                         },
-                        {
-                            area: 'actualmente aprendiendo',
-                            tools: ['Astro', 'TypeScript']
-                        }
-                    ],
-                },
-                education: {
-                    title: 'educacion',
-                    carrers: [
-                        {
-                            name: 'Tecnicatura Universitaria en Programación',
-                            university: 'Universidad Tecnologica Nacional',
-                            startDate: 'Abril 2022',
-                            finishDate: 'Diciembre 2024',
-                            duration: {
-                                number: 2,
-                                years: 'años'
-                            },
-                            location: "Argentina, Tucumán",
-                        },
-                    ],
-                    courses: [
-                        {
-                            name: 'Instituto de Inglés',
-                            university: 'ATICANA',
-                            startDate: null,
-                            finishDate: null,
-                            duration: {
-                                number: 8,
-                                years: 'años'
-                            },
-                            location: "Argentina, Tucumán",
-                        },
-                    ]
-                },
-                language: {
-                    title: 'lenguajes',
-                    languages: [
-                        {
-                            name: 'español',
-                            level: 'native',
-                            cefr: null,
-                        },
-                        {
-                            name: 'ingles',
-                            level: 'intermediate',
-                            cefr: 'b2'
-                        }
-                    ]
-                },
-                cv: {
-                    text: 'Mi CV',
-                    fileName: '/MateoGonzalez_CV_Spanish.pdf',
-                }
+                        location: "Argentina, Tucumán",
+                    },
+                ]
+            },
+            language: {
+                title: 'lenguajes',
+                languages: [
+                    {
+                        name: 'español',
+                        level: 'nativo',
+                        cefr: null,
+                    },
+                    {
+                        name: 'ingles',
+                        level: 'intermedio',
+                        cefr: 'b2'
+                    }
+                ]
+            },
+            cv: {
+                text: 'Mi CV',
+                fileName: '/MateoGonzalez_CV_Spanish.pdf',
             }
         }
-    },
+    }
 }
+

@@ -1,23 +1,18 @@
 ---
-import { tldr } from "../../content/content";
-import SwitchButton from "../ThemeButton.astro";
-const data = tldr
-const language = 'english'
+import {ui, name} from "../../i18n/ui";
+import ThemeButton from "../ThemeButton.astro";
+import LanguageButton from "../LanguageButton.astro";
+import { getLangFromUrl } from "../../i18n/utils";
+import type {Language} from "../../i18n/types"
+
+const lang:Language = getLangFromUrl(Astro.url);
 ---
 <header class="flex justify-between items-center text-fallout">
     <h1>
-        {data.name} | {data[language].labor}
+        {name} | {ui[lang].labor}
     </h1>
     <div class="flex gap-4">
-        <div class="flex">
-            <span>{data[language].switch.theme.dark}</span>
-            <SwitchButton/>
-            <span>{data[language].switch.theme.light}</span>            
-        </div>
-        <div class="flex">
-            <span>{data[language].switch.language.english}</span>
-            <SwitchButton/>
-            <span>{data[language].switch.language.spanish}</span>            
-        </div>
+        <ThemeButton/>
+        <LanguageButton/>
     </div>
 </header>

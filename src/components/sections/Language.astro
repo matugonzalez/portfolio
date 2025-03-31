@@ -1,11 +1,11 @@
 ---
-import { tldr } from "../../content/content.ts";
-const data = tldr
-const language = 'english'
-const languages = data[language].sections.language.languages
+import { ui } from "../../i18n/ui"
+import { getLangFromUrl } from "../../i18n/utils"
+const lang = getLangFromUrl(Astro.url)
+const languages = ui[lang].sections.language.languages
 ---
 <h2>
-    {data[language].sections.language.title}
+    {ui[lang].sections?.language.title}
 </h2>
 <ul>
     {

@@ -1,14 +1,15 @@
 ---
-import { tldr } from "../../content/content";
-const data = tldr;
-const language = 'english'
+import { ui } from "../../i18n/ui";
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <div>
     <h2 class="capitalize">
-        {data[language].sections.introduction.title}
+        {ui[lang].sections.introduction.title}
     </h2>
     <span>
-        {data[language].sections.introduction.intro}
+        {ui[lang].sections.introduction.intro}
     </span>
 </div>

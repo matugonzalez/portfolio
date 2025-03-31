@@ -1,13 +1,13 @@
 ---
-import { tldr } from "../../content/content";
+import { ui } from "../../i18n/ui";
 import Border from "../Border.astro";
+import { getLangFromUrl } from "../../i18n/utils";
 
-const data = tldr;
-const language = 'english';
-const skills = data[language].sections.skill.skills;
+const lang = getLangFromUrl(Astro.url);
+const skills = ui[lang].sections.skill.skills;
 ---
 <h2 class="capitalize">
-    {data[language].sections.skill.title}
+    {ui[lang].sections.skill.title}
 </h2>
 
 <div class="flex gap-5">
