@@ -7,12 +7,12 @@ import type {Language} from "../../i18n/types"
 
 const lang:Language = getLangFromUrl(Astro.url);
 ---
-<header class="flex flex-col justify-between min-[30rem]:flex-row  items-center text-fallout">
-    <div class="flex flex-col gap-2 items-center min-[60rem]:flex-row">
+<header class="flex flex-col justify-between min-[30rem]:flex-row items-center text-fallout">
+    <div class="SectionHeader__title flex flex-col gap-2 min-[65rem]:flex-row">
         <h3 class="text-4xl font-bold m-1">
             {name}:
         </h3>
-        <span class="text-3xl">
+        <span class="text-3xl m-1 pt-1">
             {ui[lang].labor}
         </span>
     </div>
@@ -21,3 +21,6 @@ const lang:Language = getLangFromUrl(Astro.url);
         <LanguageButton/>
     </div>
 </header>
+<style>
+    @import '../../styles/global.css';
+</style>

@@ -10,7 +10,7 @@ const lang = getLangFromUrl(Astro.url)
 const { className } = Astro.props; 
 ---
 <div class="flex max-w-2xs relative mx-15">
-    <span class="absolute left-[-2.2rem]">
+    <span class="ThemeSpan__name-dark absolute left-[-2.2rem]">
         {ui[lang].switch.theme.dark}
     </span>
     <button 
@@ -28,6 +28,10 @@ const { className } = Astro.props;
 </div>
 
 <style>
+    @import '../styles/global.css';
+    html.es span.ThemeSpan__name-dark {
+        @apply left-[-3.5rem];
+    }
     div.SwitchButton__drop {
         margin-left: 0;
         margin-right: calc(100% - theme(height.4));

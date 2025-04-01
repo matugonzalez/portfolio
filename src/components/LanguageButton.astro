@@ -9,7 +9,7 @@ const lang = getLangFromUrl(Astro.url)
 const { className } = Astro.props; 
 ---
 <div class="flex max-w-2xs relative mx-15">
-    <span class="absolute left-[-4rem]">
+    <span class="LanguageSpan__name-1 absolute left-[-4rem]">
         {ui[lang].switch.language.english}
     </span> 
     <a href={lang === 'en' ? '/es' : '/en'}>
@@ -29,12 +29,15 @@ const { className } = Astro.props;
 </div>
 
 <style>
+    @import '../styles/global.css';
+    html.es span.LanguageSpan__name-1 {
+        @apply left-[-3.3rem];
+    }
     html.es div.LanguageButton__drop {
         margin-left: calc(0% + theme(height.4));
         margin-right: 0;
 
     }
-
     html.en div.LanguageButton__drop {
         margin-left: 0;
         margin-right: calc(100% - theme(height.4));

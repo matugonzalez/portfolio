@@ -20,7 +20,7 @@ const projects = ui[lang].sections.project.projects;
                         <a 
                             target="_blank"
                             href={project.link} 
-                            class="no-underline text-current flex flex-col gap-2 p-2 justify-between h-full"
+                            class="no-underline text-current justify-between flex flex-col gap-2 p-2 h-full"
                         >
                             <div class="flex flex-col gap-1">
                                 <span class="ProjectTitle font-semibold text-xl w-full bg-fallout-900">
@@ -29,13 +29,13 @@ const projects = ui[lang].sections.project.projects;
                                 <span class="text-sm">
                                     {project.description}
                                 </span>
-                                <div class="flex flex-none gap-2">
-                                    {project.tools.map((tool) => {
-                                        return (
-                                            <Tool tool={tool} />
-                                        )
-                                    })}
-                                </div>
+                            </div>
+                            <div class="flex flex-none gap-2">
+                                {project.tools.map((tool) => {
+                                    return (
+                                        <Tool tool={tool} />
+                                    )
+                                })}
                             </div>
                         </a>
                     </Border>
