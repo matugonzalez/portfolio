@@ -4,20 +4,15 @@ import { getLangFromUrl } from "../../i18n/utils"
 const lang = getLangFromUrl(Astro.url)
 const languages = ui[lang].sections.language.languages
 ---
-<h2>
+<h2 class="capitalize">
     {ui[lang].sections?.language.title}
 </h2>
-<ul>
+<div>
     {
         languages.map((language) => {
             return (
-                <li>
-                    <span>
-                        {language.name}
-                    </span>
-                    <span>
-                        :
-                    </span>
+                <div>
+                    - <span>{language.name}</span>:
                     <span>
                         {language.level}
                     </span>
@@ -27,8 +22,8 @@ const languages = ui[lang].sections.language.languages
                             {language.cefr}
                         </span>
                     }
-                </li>
+                </div>
             )
         })
     }
-</ul>
+</div>

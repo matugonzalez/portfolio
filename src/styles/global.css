@@ -41,6 +41,10 @@
 
     --color-fallout-dark: var(--color-fallout-300);
     --color-fallout-light: var(--color-fallout-700);
+
+    --color-fallout-container-dark: var(--color-fallout-900);
+    --color-fallout-container-light: var(--color-fallout-300);
+
     --color-terminal-primary-dark: var(--color-terminal-primary-900);
     --color-terminal-secondary-dark:var(--color-terminal-secondary-800);
     --color-terminal-primary-light:var(--color-terminal-primary-300);
