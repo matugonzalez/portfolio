@@ -28,7 +28,7 @@ export const ui: UI = {
         labor: 'frontend developer',
         sections: {
             introduction: {
-                title: 'profile',
+                title: 'introduction',
                 intro: 'Junior Frontend Developer passionate about creating attractive, responsive, and user-optimized interfaces. Skilled in HTML, CSS, JavaScript, and React, with experience in design. A fast learner, problem-solver, and team player. While my primary focus is on frontend development, I am actively expanding my backend knowledge and eager to enhance my skills in that area.',
             },
             skill:{   
@@ -111,7 +111,7 @@ export const ui: UI = {
                 projects: [
                     {
                         name: 'missed-connections',
-                        description: 'a mini-game, where you have to select related items to find groups',
+                        description: 'a mini-game, where you have to select related items to look for groups',
                         tools: ['ReactJs', 'TailwindCSS'],
                         link: 'https://github.com/matugonzalez/missed-connections',
                     },
@@ -156,7 +156,7 @@ export const ui: UI = {
         labor: 'desarrollador frontend',
         sections: {
             introduction: {
-                title: 'perfil',
+                title: 'introducción',
                 intro: 'Desarrollador Frontend Junior apasionado por crear interfaces atractivas, responsivas y optimizadas para el usuario. Con conocimientos en HTML, CSS, JavaScript y React, así como experiencia en diseño. Aprendiz rápido, resolutivo y con habilidades para el trabajo en equipo. Si bien me encuentro mas enfocado en front, estoy aprendiendo mas de backend y me encuentro dispuesto a mejorar en ese área.'
             },
             skill: {
