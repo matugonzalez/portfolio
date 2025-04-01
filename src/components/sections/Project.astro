@@ -1,0 +1,45 @@
+---
+import { ui } from "../../i18n/ui";
+import { getLangFromUrl } from "../../i18n/utils";
+import Border from "../Border.astro";
+import Tool from "../Tool.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const projects = ui[lang].sections.project.projects;
+---
+<div>
+    <h2 class="capitalize">
+        {ui[lang].sections.project.title}
+    </h2>
+
+    <div class="grid grid-cols-3 gap-4">
+        {
+            projects.map((project)=> {
+                return (
+                    <Border>
+                        <div class="flex flex-col gap-1 m-0 p-2">
+                            <span class="ProjectTitle font-semibold text-xl block bg-fallout-900">
+                                {project.name}
+                            </span>
+                            <span class="text-sm">
+                                {project.description}
+                            </span>
+                            <div class="flex flex-none gap-2">
+                                {project.tools.map((tool) => {
+                                    return (
+                                        <Tool tool={tool} />
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </Border>
+                );
+            })
+        }
+    </div>
+</div>
+<style>
+    html.light span.ProjectTitle {
+        background-color: var(--color-fallout-200);
+    }
+</style>

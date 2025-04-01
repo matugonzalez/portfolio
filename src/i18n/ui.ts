@@ -106,6 +106,35 @@ export const ui: UI = {
                     },
                 ] 
             },
+            project: {
+                title: 'my projects',
+                projects: [
+                    {
+                        name: 'missed-connections',
+                        description: 'a mini-game, where you have to select related items to find groups',
+                        tools: ['ReactJs', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/missed-connections',
+                    },
+                    {
+                        name: 'text-to-morsecode',
+                        description: 'a morse code text both ways translator.',
+                        tools: ['ReactJs', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/text-to-morsecode',
+                    },
+                    {
+                        name: 'globglogabgalab',
+                        description: 'a showcase of books.',
+                        tools: ['Astro', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/globglogabgalab',
+                    },
+                    {
+                        name: 'portfolio',
+                        description: 'my portfolio.',
+                        tools: ['Astro', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/portfolio',
+                    },
+                ]
+            },
         
             cv: {
                 text: 'My CV',
@@ -205,6 +234,35 @@ export const ui: UI = {
                         level: 'intermedio',
                         cefr: 'b2'
                     }
+                ]
+            },
+            project: {
+                title: 'mis proyectos',
+                projects: [
+                    {
+                        name: 'missed-connections',
+                        description: 'un mini-juego, donde tienes que seleccionar items relacionados para tratar encontrar grupos.',
+                        tools: ['ReactJs', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/missed-connections',
+                    },
+                    {
+                        name: 'text-to-morsecode',
+                        description: 'un traductor de texto de codigo morse.',
+                        tools: ['ReactJs', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/text-to-morsecode',
+                    },
+                    {
+                        name: 'globglogabgalab',
+                        description: 'una muestra de libros.',
+                        tools: ['Astro', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/globglogabgalab',
+                    },
+                    {
+                        name: 'portfolio',
+                        description: 'mi portfolio.',
+                        tools: ['Astro', 'TailwindCSS'],
+                        link: 'https://github.com/matugonzalez/portfolio',
+                    },
                 ]
             },
             cv: {

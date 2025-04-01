@@ -41,6 +41,12 @@ export type LanguageSkill = {
     level: string;
     cefr: string | null;
 };
+export type Project = {
+    name: string;
+    description: string;
+    tools: string[];
+    link: string;
+};
   
 export type Sections = {
     introduction: {
@@ -60,6 +66,10 @@ export type Sections = {
         title: string;
         languages: LanguageSkill[];
     };
+    project: {
+        title: string;
+        projects: Project[];
+    }; 
     cv: {
         text: string;
         fileName: string;

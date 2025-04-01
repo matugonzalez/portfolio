@@ -1,0 +1,27 @@
+---
+const { tool } = Astro.props;
+
+let className = '';
+
+switch (tool) {
+    case 'TailwindCSS':
+        className = 'border-l-8 border-cyan-600 ';
+        break; 
+    case 'ReactJs':
+        className = 'border-l-8 border-blue-400';
+        break;
+    case 'Astro':
+        className = 'border-l-8 border-orange-600';
+        break;
+    default:
+        className = '';
+        break;
+}
+---
+<span class="border flex place-items-center">
+    <span 
+        class={`${className} p-1 text-xs`}
+    >
+        {tool}
+    </span>
+</span>
