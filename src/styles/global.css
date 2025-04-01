@@ -49,13 +49,13 @@
 
 @font-face {
     font-family: 'SharetechMono';
-    src:url('/public/fonts/SharetechMonoRegular.ttf');
+    src:url('/fonts/SharetechMonoRegular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Roboto';
-    src:url('/public/fonts/RobotoVariable.ttf');
+    src:url('/fonts/RobotoVariable.ttf');
     font-weight: normal;
     font-style: normal;
 }

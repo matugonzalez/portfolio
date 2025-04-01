@@ -22,7 +22,7 @@ export const ui: UI = {
             },
             language:{
                 english: 'english',
-                spanish: 'español',
+                spanish: 'spanish',
             }
         },
         labor: 'frontend developer',

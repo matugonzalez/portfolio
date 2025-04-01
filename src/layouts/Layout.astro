@@ -1,9 +1,7 @@
 ---
-import { getLangFromUrl } from "../i18n/utils"
-const lang = getLangFromUrl(Astro.url)
 ---
 <!doctype html>
-<html lang={lang??'en'}>
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -30,9 +28,9 @@ const lang = getLangFromUrl(Astro.url)
     }
 	html.light {
         background: repeating-linear-gradient(
-        0deg,
-        transparent 0 4px,
-        var(--color-terminal-secondary-light) 4px 8px
+            0deg,
+            transparent 0 4px,
+            var(--color-terminal-secondary-light) 4px 8px
         );
         @apply bg-terminal-primary-light m-0 p-0 text-fallout-light;
     }

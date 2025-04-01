@@ -25,25 +25,21 @@ const { className } = Astro.props;
 </div>
 
 <style>
-    html.[lang='en'] div.LanguageButton__drop {
+    html.es div.LanguageButton__drop {
         margin-left: calc(0% + theme(height.4));
         margin-right: 0;
-        background-color: var(--color-fallout-dark);
+
     }
-    html[lang='es'] div.LanguageButton__drop {
+
+    html.en div.LanguageButton__drop {
         margin-left: 0;
         margin-right: calc(100% - theme(height.4));
     }
-    html[lang='es'].light div.LanguageButton__drop {
-        margin-left: calc(0% + theme(height.4));
-        margin-right: 0;
-        background-color: var(--color-fallout-light);
-    }
 
-    html[lang='en'].light div.LanguageButton__case {
+    html.light button.LanguageButton__case{
         border-color: var(--color-fallout-light);
     }
-    html[lang='en'] div.LanguageButton__case {
-        border-color: var(--color-fallout-dark);
+    html.light div.LanguageButton__drop {
+        background-color: var(--color-fallout-light);
     }
 </style>
