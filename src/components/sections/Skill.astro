@@ -10,7 +10,7 @@ const skills = ui[lang].sections.skill.skills;
     {ui[lang].sections.skill.title}
 </h2>
 
-<div class="flex gap-5">
+<div class="grid grid-cols-3 gap-5 min-[35rem]:grid-cols-4 min-[40rem]:grid-cols-5">
     {
         skills.map((skill)=> {
             let tools = skill.tools 
@@ -25,7 +25,7 @@ const skills = ui[lang].sections.skill.skills;
                                 tools.map((tool) => {
                                     return (
                                         <span class="text-sm">
-                                            - {tool}
+                                            {tool}
                                         </span>
                                     )
                                 })

@@ -1,7 +1,7 @@
 ---
 const { className = '' } = Astro.props
 ---
-<div class= `relative border-x-2 border-fallout ${className}`>
+<div class= `relative border-x-2 border-fallout ${className} max-w-2xs`>
     <div class="h-full w-full before:absolute before:left-0 before:top-[-2px] before:w-2 before:h-full before:border-y-2 after:absolute after:w-2 after:h-full after:border-y-2 after:right-0 after:top-[-2px]">
         <slot/>
     </div>

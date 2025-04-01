@@ -8,8 +8,10 @@ interface Props {
 const lang = getLangFromUrl(Astro.url)
 const { className } = Astro.props; 
 ---
-<div class="flex">
-    <span>{ui[lang].switch.language.english}</span> 
+<div class="flex max-w-2xs relative mx-15">
+    <span class="absolute left-[-4rem]">
+        {ui[lang].switch.language.english}
+    </span> 
     <a href={lang === 'en' ? '/es' : '/en'}>
         <button 
             id="languageToggle"
@@ -21,7 +23,9 @@ const { className } = Astro.props;
             </div>
         </button>
     </a> 
-    <span>{ui[lang].switch.language.spanish}</span>  
+    <span class="absolute left-10">
+        {ui[lang].switch.language.spanish}
+    </span>  
 </div>
 
 <style>

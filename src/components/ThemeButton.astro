@@ -9,8 +9,10 @@ interface Props {
 const lang = getLangFromUrl(Astro.url)
 const { className } = Astro.props; 
 ---
-<div class="flex">
-    <span>{ui[lang].switch.theme.dark}</span>
+<div class="flex max-w-2xs relative mx-15">
+    <span class="absolute left-[-2.2rem]">
+        {ui[lang].switch.theme.dark}
+    </span>
     <button 
         id="themeToggle"
         class={`SwitchButton__case w-10 h-6 rounded border-2 border-fallout-dark flex bg-transparent flex-row items-center px-0.5 ${className}`}
@@ -20,7 +22,9 @@ const { className } = Astro.props;
         >
         </div>
     </button>
-    <span>{ui[lang].switch.theme.light}</span>
+    <span class="absolute left-10">
+        {ui[lang].switch.theme.light}
+    </span>
 </div>
 
 <style>

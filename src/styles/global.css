@@ -3,6 +3,11 @@
 @theme {
     --font-ui: 'Roboto';
     --font-terminal: 'SharetechMono';
+    --breakpoint-cellphone: 35rem;
+    --breakpoint-tablet: 40rem;
+    --breakpoint-laptop: 57rem;
+    --breakpoint-desktop: 80rem;
+
     --color-fallout-50: #E6FFE6;
     --color-fallout-100: #D1FFD2;
     --color-fallout-200: #9FFEA1;

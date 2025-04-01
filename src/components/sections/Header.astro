@@ -7,11 +7,16 @@ import type {Language} from "../../i18n/types"
 
 const lang:Language = getLangFromUrl(Astro.url);
 ---
-<header class="flex justify-between items-center text-fallout">
-    <h1>
-        {name} | {ui[lang].labor}
-    </h1>
-    <div class="flex gap-4">
+<header class="flex flex-col justify-between min-[30rem]:flex-row  items-center text-fallout">
+    <div class="flex flex-col gap-2 items-center min-[60rem]:flex-row">
+        <h3 class="text-4xl font-bold m-1">
+            {name}:
+        </h3>
+        <span class="text-3xl">
+            {ui[lang].labor}
+        </span>
+    </div>
+    <div class="flex min-[30rem]:flex-col min-[40rem]:flex-row flex-row gap-4">
         <ThemeButton/>
         <LanguageButton/>
     </div>
