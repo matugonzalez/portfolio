@@ -1,0 +1,23 @@
+---
+import { ui } from "../../i18n/ui"
+import { getLangFromUrl } from "../../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const cvFileName = ui.es.sections.cv.fileName
+console.log(cvFileName)
+---
+<div class="flex items-center gap-2 mt-2">
+    <span class="text-2xl font-semibold">
+        {ui[lang].sections.cv.text}:
+    </span>
+    <a 
+        target="_blank"
+        class="text-current"
+        download
+        href= {`/cvs${cvFileName}`}
+    >
+        <button class="font-terminal text-2xl border-fallout-300 rounded-sm outline-0 bg-transparent border-2 text-current hover:scale-105 cursor-pointer">
+            CV!
+        </button>
+    </a>
+</div>

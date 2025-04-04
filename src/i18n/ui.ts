@@ -29,7 +29,7 @@ export const ui: UI = {
         sections: {
             introduction: {
                 title: 'introduction',
-                intro: 'Junior Frontend Developer passionate about creating attractive, responsive, and user-optimized interfaces. Skilled in HTML, CSS, JavaScript, and React, with experience in design. A fast learner, problem-solver, and team player. While my primary focus is on frontend development, I am actively expanding my backend knowledge and eager to enhance my skills in that area.',
+                intro: 'Junior Frontend Developer passionate about creating attractive, responsive, and user-optimized interfaces. A fast learner, problem-solver, and team player. While my primary focus is on frontend development, I am actively expanding my backend knowledge and eager to enhance my skills in that area.',
             },
             skill:{   
                 title: 'skills',
@@ -43,16 +43,12 @@ export const ui: UI = {
                         tools: ['Node.js', 'Express.js'],
                     },
                     {
-                        area: 'vcs',
-                        tools: ['Git'],
-                    },
-                    {
                         area: 'design',
                         tools: ['Figma'],
                     },
                     {
                         area: 'other',
-                        tools: ['Github'],
+                        tools: ['Git', 'Github'],
                     },
                     {
                         area: 'currently learning',
@@ -157,7 +153,7 @@ export const ui: UI = {
         sections: {
             introduction: {
                 title: 'introducción',
-                intro: 'Desarrollador Frontend Junior apasionado por crear interfaces atractivas, responsivas y optimizadas para el usuario. Con conocimientos en HTML, CSS, JavaScript y React, así como experiencia en diseño. Aprendiz rápido, resolutivo y con habilidades para el trabajo en equipo. Si bien me encuentro mas enfocado en front, estoy aprendiendo mas de backend y me encuentro dispuesto a mejorar en ese área.'
+                intro: 'Desarrollador Frontend Junior apasionado por crear interfaces atractivas, responsivas y optimizadas para el usuario. Aprendiz rápido, resolutivo y con habilidades para el trabajo en equipo. Si bien me encuentro mas enfocado en front, estoy aprendiendo mas de backend y me encuentro dispuesto a mejorar en ese área.'
             },
             skill: {
                 title: 'habilidades',
@@ -171,12 +167,7 @@ export const ui: UI = {
                         area: 'backend',
                         tools: ['Node.js', 'Express.js'],
                     },
-        
-                    {
-                        area: 'vcs',
-                        tools: ['Git']
-                    },
-        
+
                     {
                         area: 'diseño',
                         tools: ['Figma']
@@ -184,7 +175,7 @@ export const ui: UI = {
         
                     {
                         area: 'otras',
-                        tools: ['Github']
+                        tools: ['Git','Github']
                     },
                     {
                         area: 'actualmente aprendiendo',
@@ -267,7 +258,7 @@ export const ui: UI = {
             },
             cv: {
                 text: 'Mi CV',
-                fileName: '/MateoGonzalez_CV_Spanish.pdf',
+                fileName: '/MateoGonzalez_CV_Español.pdf',
             }
         }
     }
